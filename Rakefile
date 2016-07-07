@@ -11,7 +11,6 @@ if ENV['GENERATE_REPORTS'] == 'true'
   task :rspec => 'ci:setup:rspec'
 end
 
-GENERATE_REPORTS=true rake rspec
 
 load File.join(File.dirname(__FILE__), "buildwise.rake")
 
