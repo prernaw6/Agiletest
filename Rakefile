@@ -4,7 +4,14 @@ require 'rubygems'
 gem 'ci_reporter'
 gem 'rspec'
 require 'rspec/core/rake_task'
-require 'ci/reporter/rake/rspec' # use this if you're using RSpec
+#require 'ci/reporter/rake/rspec' # use this if you're using RSpec
+
+if ENV['GENERATE_REPORTS'] == 'true'
+  require 'ci/reporter/rake/rspec'
+  task :rspec => 'ci:setup:rspec'
+end
+
+GENERATE_REPORTS=true rake rspec
 
 load File.join(File.dirname(__FILE__), "buildwise.rake")
 
