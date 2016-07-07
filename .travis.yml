@@ -8,8 +8,6 @@ before_install:
   - gem install bundler
 cache: bundler
 
-
-GENERATE_REPORTS=true rake rspec
 #gem 'ci_reporter_rspec'
 #$ bundle
 
