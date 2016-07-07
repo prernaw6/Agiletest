@@ -8,17 +8,17 @@ before_install:
   - gem install bundler
 cache: bundler
 
-gem 'ci_reporter_rspec'
-$ bundle
+#gem 'ci_reporter_rspec'
+#$ bundle
 
 
-require 'ci/reporter/rake/rspec'
+#require 'ci/reporter/rake/rspec'
 
 # ...
 # Rake code that creates a task called `:rspec`
 # ...
 
-task :rspec => 'ci:setup:rspec'
+#task :rspec => 'ci:setup:rspec'
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 #script: bundle exec rspec spec
 sudo: requires
