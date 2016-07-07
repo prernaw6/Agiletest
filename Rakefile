@@ -9,7 +9,7 @@ include CI::Reporter::TestUtils::Rake
       
     task :test do  
       $LOAD_PATH.unshift('lib')  
-
+end
 
 namespace :generate do
   task :clean do
