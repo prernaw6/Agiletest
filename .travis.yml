@@ -1,9 +1,7 @@
-# Usage: ruby play/travis.rb [FILE] 
-# Will output any error/warnings 
- require 'bundler/setup' 
- require 'travis/yaml' 
- 
- 
- file    = ARGV[0] || ".travis.yml" 
- content = File.read(file) 
- Travis::Yaml.parse!(content, file) 
+language: ruby
+rvm:
+ - 2.2
+ - jruby
+ - rbx-2
+# uncomment and edit the following line if your project needs to run something other than `rake`:
+# script: bundle exec rspec spec
