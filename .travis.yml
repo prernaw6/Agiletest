@@ -1,9 +1,9 @@
 # Usage: ruby play/travis.rb [FILE] 
-2 # Will output any error/warnings 
-3 require 'bundler/setup' 
-4 require 'travis/yaml' 
-5 
+# Will output any error/warnings 
+ require 'bundler/setup' 
+ require 'travis/yaml' 
  
-6 file    = ARGV[0] || ".travis.yml" 
-7 content = File.read(file) 
-8 Travis::Yaml.parse!(content, file) 
+ 
+ file    = ARGV[0] || ".travis.yml" 
+ content = File.read(file) 
+ Travis::Yaml.parse!(content, file) 
