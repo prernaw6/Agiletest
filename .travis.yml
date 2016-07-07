@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+    - "0.10"
+services:
+  - mongodb
+before_install: npm install -g grunt-cli phantomjs
+install: npm install
+before_script: grunt init:dev build:dev
+
+"scripts": {
+  "start": "node server/server.js",
+  "test": "grunt test"
+},
